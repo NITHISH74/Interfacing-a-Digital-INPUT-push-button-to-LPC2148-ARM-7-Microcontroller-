@@ -1,12 +1,12 @@
 # Interfacing-a-Digital-INPUT-push-button-to-LPC2148-ARM-7-Microcontroller-
-Name :
-Roll no 
-Date of experiment :
+Name : NITHISHWAR S 
+Roll no : 212221230071
+Date of experiment : 02/10/2022
 
 Ex. No. : 3
-Date: 
  
-### Aim: To Interface a Digital input (pushbutton ) to LPC2148 ARM 7 and write a code to switch on and of an LED 
+### Aim:
+To Interface a Digital input (pushbutton ) to LPC2148 ARM 7 and write a code to switch on and of an LED 
 Components required: Proteus ISIS professional suite, Kiel μ vision 5 Development environment 
 ### Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
@@ -116,14 +116,41 @@ Step 9: Select the hex file from the Kiel program folder and import the program 
 
 
 ### Kiel - Program  
+## Coding:
+```
+#include<LPC214x.h>
+#define led (1<<2)     // header file
+#define sw (1<<10)      //led macro for pin 2 of port0
+int main(void)           //sw macro for pin 10 of port0
+{
+	unsigned int x;
+	IO0DIR|=(~sw);      //config p1.24 - p1.31 as input
+	IO0DIR|=led;        //config p1.16 - p1.23 as output
+	while(1)
+	{
+		x = IOPIN0 & sw;      // save staus 
+		if(x==sw)          //if switch open
+		{
+			IOCLR0|=led;                  //led off
+	  }
+		else
+		{
+			IOSET0|=led;                //led on
+		}
+		
+}
+	}
+```
+### Output screen shots :
+### LED is off:
+![image](https://user-images.githubusercontent.com/94164665/193499713-e8580de3-5ba5-43a0-80dc-0be975202e66.png)
+
+### LED is on:
+![image](https://user-images.githubusercontent.com/94164665/193499673-31748a68-f05f-42f5-8cd8-004158491c95.png)
+
+### Circuit Diagram:
+![image](https://user-images.githubusercontent.com/94164665/193499564-2eb8ee53-f9e3-4790-9aaf-d410fc173d37.png)
 
 
 ### Result :
-Interfacing a digital output with ARM microcontroller is executed 
-
-### Output screen shots :
-
-
-
-
-
+Interfacing a digital output with ARM microcontroller is executed. 

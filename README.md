@@ -1,21 +1,14 @@
 # Interfacing-a-Digital-INPUT-push-button-to-LPC2148-ARM-7-Microcontroller-
-Name : NITHISHWAR S 
-Roll no : 212221230071
-Date of experiment : 02/10/2022
 
-Ex. No. : 3
- 
-### Aim:
+## Aim:
 To Interface a Digital input (pushbutton ) to LPC2148 ARM 7 and write a code to switch on and of an LED 
 Components required: Proteus ISIS professional suite, Kiel μ vision 5 Development environment 
-### Theory 
+## Theory:
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
-
 
 What is an ARM7 Processor?
 ARM7 processor is commonly used in embedded system applications. Also, it is a balance among classic as well as new-Cortex sequence. This processor is tremendous in finding the resources existing on the internet with excellence documentation offered by NXP Semiconductors. It suits completely for an apprentice to obtain in detail hardware & software design implementation.
 LPC2148 Microcontroller
- The LPC2148 microcontroller is designed by Philips (NXP Semiconductor) with several in-built features & peripherals. Due to these reasons, it will make more reliable as well as the efficient option for an application developer. LPC2148 is a 16-bit or 32-bit microcontroller based on ARM7 family.
 Features of LPC2148
 The main features of LPC2148 include the following.
 •	The LPC2148 is a 16 bit or 32 bit ARM7 family based microcontroller and available in a small LQFP64 package.
@@ -24,22 +17,17 @@ The main features of LPC2148 include the following.
 •	It takes 400 milliseconds time for erasing the data in full chip and 1 millisecond time for 256 bytes of programming.
 •	Embedded Trace interfaces and Embedded ICE RT offers real-time debugging with high-speed tracing of instruction execution and on-chip Real Monitor software.
 •	It has 2 kB of endpoint RAM and USB 2.0 full speed device controller. Furthermore, this microcontroller offers 8kB on-chip RAM nearby to USB with DMA.
-•	One or two 10-bit ADCs offer 6 or 14 analogs i/ps with low conversion time as 2.44 μs/ channel.
 •	Only 10 bit DAC offers changeable analog o/p.
 •	External event counter/32 bit timers-2, PWM unit, & watchdog.
 •	Low power RTC (real time clock) & 32 kHz clock input.
 •	Several serial interfaces like two 16C550 UARTs, two I2C-buses with 400 kbit/s speed.
 •	5 volts tolerant quick general purpose Input/output pins in a small LQFP64 package.
-•	Outside interrupt pins-21.
-•	60 MHz of utmost CPU CLK-clock obtainable from the programmable-on-chip phase locked loop by resolving time is 100 μs.
-•	The incorporated oscillator on the chip will work by an exterior crystal that ranges from 1 MHz-25 MHz
-•	The modes for power-conserving mainly comprise idle & power down.
-•	For extra power optimization, there are individual enable or disable of peripheral functions and peripheral CLK scaling.
+
  ![image](https://user-images.githubusercontent.com/36288975/193398005-6e1257a9-16ae-43f5-9f09-33bb21ed25b9.png)
 
 
 
-### Procedure:
+## Procedure:
 For creation of project on    Kiel μ vision 5 Development environment (LPC21 XX/48/38)
 1.	Click on the menu Project — New µVision Project creates a new project. Select an empty folder and enter the project name, for example Project1. It is good practice to use a separate folder for each project.
 2.	Next, the dialog Select Device for Target opens.
@@ -51,7 +39,6 @@ Select the device database. Default is Software Packs. You can have various loca
 3.	Select the device for your application. This selection defines essential tool settings such as compiler controls, the memory layout for the linker, and the Flash programming algorithms.
 4.	Click OK.
 5.	Click on the new file option and save the file using save option with .C extension 
-
 
 
 For creating the simulation environment in Proteus suite 
@@ -84,7 +71,6 @@ Step 5:Click On Pick from Libraries. It shows the categories of components avail
 
 Step 6: Select the components from categories or type the part name in Keywords text box.
  Place all the required components and route the wires i.e, make connections.
-Either selection mode above the component mode or component mode allows to connect through wires. Left click from one terminal to other to make connection. Double right-click on the connected wire or the component to remove connection or the component respectively.
  ![image](https://user-images.githubusercontent.com/36288975/193398050-d6d28800-0c5b-4f5c-a77c-227f3336a125.png)
 
  Figure -07 Component Properties Selection
@@ -141,7 +127,7 @@ int main(void)           //sw macro for pin 10 of port0
 }
 	}
 ```
-### Output screen shots :
+## Output screen shots :
 ### LED is off:
 ![image](https://user-images.githubusercontent.com/94164665/193499713-e8580de3-5ba5-43a0-80dc-0be975202e66.png)
 
@@ -152,5 +138,5 @@ int main(void)           //sw macro for pin 10 of port0
 ![image](https://user-images.githubusercontent.com/94164665/193499564-2eb8ee53-f9e3-4790-9aaf-d410fc173d37.png)
 
 
-### Result :
+## Result :
 Interfacing a digital output with ARM microcontroller is executed. 
